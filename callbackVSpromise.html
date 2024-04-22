@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CallBack VS Promise</title>
+  </head>
+  <body>
+    <h4>CallBack VS Promise</h4>
+
+    <!-- SetTimeout using callback -->
+    <h3>USING CALLBACK</h3>
+    <h2 id="callback"></h2>
+
+    <!-- SetTimeout using promise -->
+    <h3>USING PROMISE</h3>
+    <h2 id="promise"></h2>
+
+    <script>
+      // Using CallBACk
+      setTimeout(function () {
+        myCallback("I AM SUYASH MISHRA!!!");
+      }, 3000);
+
+      function myCallback(value) {
+        document.getElementById("callback").innerHTML = value;
+      }
+
+      //Using Promise
+      let promise = new Promise(function (resolve, reject) {
+        let x = 0;
+        if (x == 0) {
+          reject("error");
+        }
+        setTimeout(function () {
+          resolve("I AM A WEB DEVELOPER");
+        }, 5000);
+      });
+
+      promise.then(function (value) {
+        document.getElementById("promise").innerHTML = value;
+      });
+      promise.catch(function (error) {
+        document.getElementById("promise").innerHTML = error;
+      });
+    </script>
+  </body>
+</html>

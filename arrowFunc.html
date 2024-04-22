@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ES6 - Arrow Function</title>
+  </head>
+  <body>
+    <h4>ES6 - Arrow Function</h4>
+    <p>Calculator</p>
+    <label for="">Enter First Number</label>
+    <input type="text" name="first" id="first" /><br>
+    <label for="">Enter Second Number</label>
+    <input type="text" name="second" id="second" /><br>
+    <input onclick="add()" type="button" value="+"/>
+    <input onclick="sub()" type="button" value="-"/>
+    <input onclick="mul()" type="button" value="*"/>
+    <input onclick="div()" type="button" value="/"/>
+    <label for="output">Result</label>
+    <input type="text" name="output" id="output">
+    <script>
+      const add = () => {
+        let first = document.getElementById("first").value;
+        let second = document.getElementById("second").value;
+        var sum = parseInt(first) + parseInt(second);
+        document.getElementById('output').value = sum; 
+      };
+
+      const sub = () => {
+        let first = document.getElementById("first").value;
+        let second = document.getElementById("second").value;
+        var sum = parseInt(first) - parseInt(second);
+        document.getElementById('output').value = sum; 
+      };
+
+      const mul = () => {
+        let first = document.getElementById("first").value;
+        let second = document.getElementById("second").value;
+        var sum = parseInt(first) * parseInt(second);
+        document.getElementById('output').value = sum; 
+      };
+      
+      const div = () => {
+        let first = document.getElementById("first").value;
+        let second = document.getElementById("second").value;
+        var sum = parseInt(first) / parseInt(second);
+        document.getElementById('output').value = sum; 
+      };
+    </script>
+  </body>
+</html>
