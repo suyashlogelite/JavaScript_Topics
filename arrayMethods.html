@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Array Methods</title>
+  </head>
+  <body>
+    <!-- push,pop,sort,reverse,shift,unshift,concat,join,toString,flat -->
+
+    <script>
+      // The pop() method removes the last element from an array:
+      // The pop() method returns the value that was "popped out":
+
+      // The push() method adds a new element to an array (at the end):
+      // The push() method returns the new array length:
+
+      // The shift() method removes the first array element and "shifts" all other elements to a lower index.
+      // The shift() method returns the value that was "shifted out":
+
+      // The unshift() method adds a new element to an array (at the beginning), and "unshifts" older elements:
+      // The unshift() method returns the new array length:
+
+      let arr = [70, 50, 10, 20, 30, 40, 80];
+      arrlength = arr.length;
+
+      document.write("Original Array =>" + arr + "</br>");
+
+      arrSort = arr.sort();
+      document.write("Sorted Array =>" + arrSort + "</br>");
+
+      arr.pop();
+      document.write("After Pop =>" + arr + "</br>");
+
+      arr.push(45);
+      document.write("After Push =>" + arr + "</br>");
+
+      arr.shift(45);
+      document.write("After shift =>" + arr + "</br>");
+
+      arr.unshift(10);
+      document.write("After unshift =>" + arr + "</br>");
+
+      let arr2 = [55, 25, 35, 45, 65, 15, 95];
+      let arr3 = [155, 125, 135, 145, 165, 115, 195];
+
+      var concatArray = arr.concat(arr2, arr3);
+      document.write("After concat =>" + concatArray + "</br>");
+
+      var toStringArr = arr.toString();
+      document.write("Array to String =>" + toStringArr + "</br>");
+
+      // The join() method returns an array as a string.
+
+      // The join() method does not change the original array.
+
+      let joinArray = arr.join(" + ");
+      document.write("Join Array =>" + joinArray + "</br>");
+
+      let text = "My name is Suyash Mishra";
+      var splitArray = text.split(" ");
+      document.write("String to Array =>" + splitArray + "</br>");
+
+      // Flattening an array is the process of reducing the dimensionality of an array.
+
+      // Flattening is useful when you want to convert a multi-dimensional array into a one-dimensional array.
+
+      // The flat() method creates a new array with sub-array elements concatenated to a specified depth.
+
+      let arr4 = [
+        [2, 5, 7, 8],
+        [3, 4, 5],
+        [1, 7, 8, 9, 0],
+      ];
+      var flatArray = arr4.flat();
+      document.write("Array flattening =>" + flatArray + "</br>");
+    </script>
+  </body>
+</html>
