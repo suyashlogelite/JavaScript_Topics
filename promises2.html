@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Promises Part 2</title>
+  </head>
+  <body>
+    <script>
+      console.log("Fetching Data Please Wait");
+      function prom(complete) {
+        return new Promise(function (resolve, reject) {
+          setTimeout(() => {
+            if (complete) {
+              resolve("I am Successfull");
+            } else {
+              reject("I am Failed!");
+            }
+          }, 3000);
+        });
+      }
+      
+      prom(true).then((result) => {
+        console.log(result);
+      });
+      prom(true).catch((error) => {
+        console.log(error);
+      });
+    </script>
+  </body>
+</html>

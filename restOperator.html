@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rest Operator</title>
+</head>
+<body>
+    <script>
+        function sum(name,course, ...args){
+            console.log(`Hello ${name} of ${course}`);
+            let sum = 0;
+            for(let i in args){
+                sum += args[i];
+            }
+            console.log(`Marks => ${sum}`);
+        }
+        sum("John Wick","B.Tech",20,30,40);
+        sum("Peter Parker","MCA",80,90,10);
+    </script>
+</body>
+</html>
