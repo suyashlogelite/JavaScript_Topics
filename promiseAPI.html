@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const user = fetch("https://dummyjson.com/carts");
+      user
+        .then((data) => {
+          return data.json();
+        })
+        .then((data2) => {
+          console.log(data2);
+        })
+        .catch((error) => {
+          console.log(`catch error ${error}`);
+        });
+    </script>
+  </body>
+</html>

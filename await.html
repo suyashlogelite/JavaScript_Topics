@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Await</title>
+</head>
+<body>
+    <script>
+        const p = new Promise((resolve,reject) =>{
+            resolve("Promise Resolved value!!");
+        })
+        async function handlePromise(){
+            const val = await p;
+            console.log(val);
+        }
+        handlePromise();
+    </script>
+</body>
+</html>

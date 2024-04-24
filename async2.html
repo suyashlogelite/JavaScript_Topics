@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Async</title>
+</head>
+<body>
+    <script>
+        
+
+
+        async function getData(){
+            return "Namaste"; // Async function always written a Promise and if the function not written the value itself then it will automatically wrap up that value inside a promise and then promise will be returned //
+        }
+        const dataPromise = getData();
+        // console.log(data);
+
+        dataPromise.then((result) => {
+            console.log(result);
+        });
+    </script>
+</body>
+</html>
